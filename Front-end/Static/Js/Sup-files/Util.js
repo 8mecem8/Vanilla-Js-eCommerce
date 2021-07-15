@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios from 'axios'
 
 
@@ -9,12 +10,22 @@ export const parseRequestUrl = () =>
     //console.log('request is =>>>',request)
 
      return{
+=======
+export const parseRequestUrl = () =>
+{   
+    const url = document.location.hash.toLowerCase();
+    const request = url.split("/");
+
+    console.log(request)
+    return{
+>>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
         resource: request[1],
         id: request[2],
         verb: request[3],
     }
 
     
+<<<<<<< HEAD
 };
 
 export const rerender = async(component) =>
@@ -88,3 +99,6 @@ export const showMessage = (message, callback) => {
       }
     });
 };
+=======
+}
+>>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6

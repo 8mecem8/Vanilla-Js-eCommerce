@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 import { parseRequestUrl } from '../Sup-files/Util.js'
 import axios from "axios"
 import Rating from "../components/Rating.js"
+=======
+>>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
 
 
 const Single =
 {
+<<<<<<< HEAD
 
 aRender: async ()=>
     {
@@ -78,6 +82,11 @@ render: async()=>
             </div>
 
         </div>`
+=======
+render:() =>
+    {
+        return`<div> Single Product Page</div>`
+>>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
 
     }
 }
