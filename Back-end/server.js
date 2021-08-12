@@ -6,11 +6,8 @@ const mongoose = require('mongoose');
 const data = require('./Sup-files/data.js')
 
 const userRouter = require('./Routes/userRoute.js');
-<<<<<<< HEAD
 const orderRouter  = require('./Routes/orderRoute.js');
 
-=======
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 require('dotenv').config({path:__dirname+'/.env'})
 
 
@@ -30,10 +27,7 @@ app.use(express.json({ strict: false }))
 
 
 app.use('/api/users', userRouter)
-<<<<<<< HEAD
 app.use('/api/order', orderRouter)
-=======
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 
 //Database------------------------------------------------------------------------------
 
@@ -61,13 +55,10 @@ app.get("/api/products/:id", (req, res)=>
 
 
 
-<<<<<<< HEAD
 app.get("/api/paypal/clientId", (req, res)=>
 {
      res.send({clientId: process.env.PAYPAL_CLIENT_ID})
 })
-=======
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 
 
 
@@ -87,21 +78,11 @@ const errorHandler = (error, request, response, next) => {
   console.error(error.message)
 
   if (error.name === 'CastError') {
-<<<<<<< HEAD
     return response.status(400).send({message:'malformatted id' })
   } else if (error.name === 'ValidationError') {
     return response.json({message: error.message })
   } else if (error.name === 'JsonWebTokenError') {
     return response.status(401).json({message:'invalid token'})
-=======
-    return response.status(400).send({ error: 'malformatted id' })
-  } else if (error.name === 'ValidationError') {
-    return response.status(400).json({ error: error.message })
-  } else if (error.name === 'JsonWebTokenError') {
-    return response.status(401).json({
-      error: 'invalid token'
-    })
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
   }
 
 

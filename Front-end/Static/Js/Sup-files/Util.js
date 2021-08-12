@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import axios from 'axios'
 import { getCartItems } from './Lstorage';
-=======
-<<<<<<< HEAD
-import axios from 'axios'
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 
 
 export const parseRequestUrl = () =>
@@ -15,37 +10,17 @@ export const parseRequestUrl = () =>
     //console.log('request is =>>>',request)
 
      return{
-<<<<<<< HEAD
-=======
-=======
-export const parseRequestUrl = () =>
-{   
-    const url = document.location.hash.toLowerCase();
-    const request = url.split("/");
-
-    console.log(request)
-    return{
->>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
         resource: request[1],
         id: request[2],
         verb: request[3],
     }
 
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 };
 
 export const rerender = async(component) =>
 {
-<<<<<<< HEAD
   document.querySelector('.main-container').innerHTML = await component.render(); if(component.aRender){await component.aRender()}
-=======
-  document.location.hash = '/cart'  //document.getElementsByClassName("main-container").innerHTML = await component.render(); await component.aRender()
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 }
 
 
@@ -59,7 +34,6 @@ export const signina = async(credentials) =>
 }
 
 
-<<<<<<< HEAD
 
 export const registera = async(credentials) =>
 {
@@ -86,8 +60,6 @@ export const update = async(credentials) =>
 
 
 
-=======
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 export const setUserInfo = async(data) =>
 {
 
@@ -134,20 +106,13 @@ export const showMessage = (message, callback) => {
   </div>
   `;
   document.getElementById('message-overlay').classList.add('active');
-<<<<<<< HEAD
   document.getElementById('message-overlay-close-button').addEventListener('click', () => {
-=======
-  document
-    .getElementById('message-overlay-close-button')
-    .addEventListener('click', () => {
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
       document.getElementById('message-overlay').classList.remove('active');
       if (callback) {
         callback();
       }
     });
 };
-<<<<<<< HEAD
 
 
 
@@ -406,8 +371,3 @@ export const getMyOrders = async () =>
 }
 
 
-=======
-=======
-}
->>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d

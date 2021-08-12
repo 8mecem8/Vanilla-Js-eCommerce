@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 const userRouter = require('express').Router()
 
 
 const userModel = require('../Models/userModel')
 const jwt = require('jsonwebtoken')
 
-=======
-const userModel = require('../Models/userModel')
-const jwt = require('jsonwebtoken')
-
-const userRouter = require('express').Router()
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 
 userRouter.post('/createadmin', async (req, res, next)=>
 {
@@ -87,7 +80,6 @@ userRouter.post('/signin', async (req, res, next)=>
 
 
 
-<<<<<<< HEAD
 userRouter.post('/register', async (req, res, next)=>
 {
 
@@ -209,6 +201,4 @@ userRouter.put('/:id', async (req, res, next)=>
 
 
 
-=======
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 module.exports = userRouter

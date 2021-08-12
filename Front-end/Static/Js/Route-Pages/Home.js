@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 import Rating from "../components/Rating.js"
 
 
@@ -28,24 +24,6 @@ const home =
             ${ await prlist.map(at=>
                 {  //console.log(at)
                   
-<<<<<<< HEAD
-=======
-=======
-import data from '../Sup-files/data.js'
-
-const prlist = data.products
-
-
-const home =
-{
-    render: () =>
-    {
-        return `
-        <ul class="products">
-            ${prlist.map(at=>
-                {
->>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
                 return`
                     <li>
                         <div class="product">
@@ -59,21 +37,12 @@ const home =
                                 </a>
                             </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
                             
                                 <div class="product-rating">
                                     ${Rating.render({value: at.rating, text: `${at.numReviews} reviews`})}
                                 </div>
                             
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 516093ab7d234b338de922cdf9aeccfba7d317a6
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
                             <div class="product-brand">
                                 ${at.brand}
                             </div>

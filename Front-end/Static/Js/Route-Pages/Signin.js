@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { getUserInfo, hideLoading, setUserInfo, showLoading, signina, showMessage, redirectUser } from '../Sup-files/Util.js'
-=======
-import { getUserInfo, hideLoading, setUserInfo, showLoading, signina, showMessage } from '../Sup-files/Util.js'
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
 
 
 
@@ -30,11 +26,7 @@ const Signin =
                             else{
                                 setUserInfo(data)
 
-<<<<<<< HEAD
                                 redirectUser()
-=======
-                                document.location.hash = "/"
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
                                 }
 
 
@@ -45,11 +37,7 @@ const Signin =
     {       
             const getlocaldata = await getUserInfo()
             
-<<<<<<< HEAD
             if(getlocaldata.name){redirectUser()}
-=======
-            if(getlocaldata.name){ document.location.hash = "/"}
->>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
                
 
             return`
