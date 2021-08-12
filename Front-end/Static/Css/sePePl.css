@@ -1,0 +1,124 @@
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto;
+  }
+
+  .checkout-steps > div{
+    border-top: 0.3rem #c0c0c0 solid;
+    color: #c0c0c0 ;
+    flex: 1 1;
+    padding-top:1rem;
+  }
+
+
+  .checkout-steps > div.active{
+    color: #f08000;
+    border-top-color: #f08000;
+  }
+
+
+  .a-payment{
+    margin-left: 40%;
+  }
+
+
+  /*  */
+  /* ----------------Order--------------- */
+  /*  */
+
+
+  .order{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+
+  .order h2{
+    margin: 0;
+    font-size: 2.6rem;
+    padding-bottom: 1rem;
+    font-weight: 900;
+  }
+
+  .order .cart-list-container{
+    padding: 0;
+  }
+
+  .order-info{
+    flex: 3 1 60rem;
+  }
+
+
+   .order-info > div{
+    border: 0.1rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+    background-color: #fcfcfc;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .order-info > div > div{
+    padding: 0.4rem;
+  }
+
+  .order-action{
+    flex: 1 1 20rem;
+    border:0.1rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+    background-color:#fcfcfc ;
+    padding: 1rem;
+  }
+
+  .order-action ul{
+    padding: 0;
+    list-style-type: none;
+  }
+
+   .order-action li{
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 0.5rem;
+   }
+
+   .order-action .total{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c04000;
+   }
+
+
+
+
+     /*  */
+  /* ----------------Profile--------------- */
+  /*  */
+
+
+  .profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.profile-info {
+  flex: 1 1 20rem;
+}
+.profile-orders {
+  flex: 3 1 60rem;
+  margin-left: 1rem;
+}
+
+table {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+td {
+  padding: 0.5rem;
+}

@@ -1,0 +1,407 @@
+@font-face {
+  font-family: Monoton;
+  src: url(./Monoton-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  -webkit-text-stroke: 1px transparent;
+}
+
+html {
+  font-size: 62.5%; /* (standard size of font)16px * 62.5 = 10px = 1rem for to be reponsive */
+}
+
+body {
+  height: 100vh;
+  font-size: medium;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+/* ------------loading screen----------------- */
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 16, 16, 0.5);
+}
+
+.overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* ------------loading screen end----------------- */
+
+/* ------------Error screen----------------- */
+
+.overlay > div {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 40rem;
+}
+.overlay > div > * {
+  margin: 2rem;
+}
+
+/* ------------Error screen end----------------- */
+
+button {
+  font: 1.6rem;
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+
+button.primary {
+  background-color: #ffc040;
+}
+
+.fw {
+  width: 100%;
+  color: black;
+}
+
+.success {
+  color: #14b606;
+}
+
+.error {
+  color: #d31818;
+}
+
+.logo {
+  font-family: Monoton;
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+  padding: 0;
+  display: flex;
+  background: repeating-linear-gradient(52deg, #05d15733, transparent 100px);
+  border: #ffe4c400 solid 1px;
+  border-radius: 515px 277px;
+  margin-left: 1rem;
+}
+
+.logo div {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header", "main", "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100vh;
+}
+
+header {
+  grid-area: "header";
+  background: rgb(47, 95, 107);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.route-link {
+  color: aliceblue;
+  padding: 1rem;
+}
+
+.route-link:hover {
+  color: orange;
+}
+
+
+#logout{
+  font-size: 2.3rem;
+  
+}
+
+footer {
+  background: rgb(47, 95, 107);
+  color: papayawhip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  line-height: 2.5rem;
+}
+
+/*  */
+/* Products */
+/*  */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.products li {
+  flex: 0 1 30rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  height: 42rem;
+  border-top: papayawhip solid 0.2rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+.product img {
+  max-height: 26rem;
+  max-width: 22rem;
+  margin-top: 2rem;
+}
+
+.product-name {
+  line-height: 2.2rem;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+  color: #808080;
+}
+.product-price {
+  font-size: 2rem;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+/* Ratings */
+
+.rating {
+  color: #ffc000;
+  font-size: 1.8rem;
+}
+
+.rating span:last-child {
+  color: #444444;
+  font-size: 1.3rem;
+}
+
+/*  */
+/* Single Product */
+/*  */
+
+.Details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 78em;
+}
+
+.Details-image {
+  flex: 1 1 35rem;
+}
+
+.Details-image img {
+  max-width: 60rem;
+  width: 100%;
+}
+
+.Details-info,
+.Details-action {
+  flex: 1 1 30rem;
+}
+
+.Details-info ul,
+.Details-action ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.Details-info h1 {
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.Details-info li,
+.Details-action li {
+  margin-bottom: 1.4rem;
+}
+
+.Details-action {
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+
+/*  */
+/* Shopping Cart */
+/*  */
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cart-list {
+  flex: 3 1 60rem;
+}
+
+.cart-action {
+  flex: 1 1 20rem;
+  background-color: #f0f0f0;
+  border: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  line-height: 4rem;
+}
+
+.cart-list-container {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.cart-list-container li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.cart-list-container img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.cart-list-container li:first-child {
+  align-items: flex-end;
+}
+
+.cart-image {
+  flex: 1 1;
+}
+
+.cart-name {
+  flex: 8 1;
+}
+
+.cart-name > div {
+  padding: 1rem;
+}
+
+.cart-price {
+  flex: 1 1;
+  text-align: right;
+}
+
+.cart-list h3 {
+  margin: 0;
+}
+
+.cart-list button,
+.cart-list select {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+/*  */
+/* Signin---------------------------------------------------------- */
+/*  */
+
+.form-container {
+  width: 20em;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 3%;
+  margin-bottom: 4em;
+}
+
+.createaccount {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  border-bottom: 1px black solid;
+  border-left: 1px black solid;
+  padding-left: 2px;
+}
+
+/*  */
+/* Register---------------------------------------------------------- */
+/*  */
+
+.createAcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.end-info a{
+    text-decoration: none;
+}
