@@ -1,7 +1,11 @@
 module.exports = {
   products: [
     {
+<<<<<<< HEAD
       _id: '111111111111111111111111',
+=======
+      _id: '1',
+>>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
       name: 'Hiskywin Full Zip Running Shirts Thermal Workout',
       category: 'Shirts',
       image: './Static/Assets/images/1.jpg',
@@ -13,7 +17,11 @@ module.exports = {
       countInStock: 6,
     },
     {
+<<<<<<< HEAD
       _id: '222222222222222222222222',
+=======
+      _id: '2',
+>>>>>>> 52a9bc4e1fb7615b12579046297faf5182a4d62d
       name: 'Nike Full-Zip Hoodie Mens Workout Sweatshirt',
       category: 'Shirts',
       image: './Static/Assets/images/2.jpg',
