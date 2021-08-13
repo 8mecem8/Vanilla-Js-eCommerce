@@ -13,25 +13,30 @@ import '../Css/sePePl.css'
 import Payment from './Route-Pages/Payment.js'
 import PlaceOrderScreen from './Route-Pages/PlaceOrder.js'
 import OrderScreen from './Route-Pages/Order.js'
+import Dashboard from './Route-Pages/Dashboard.js'
+import ProductList from './Route-Pages/ProductList.js'
+import OrderList from './Route-Pages/OrderList.js'
+import CreateProduct from "./Route-Pages/CreateProduct.js";
 
 
 
-const routes =
-{
-    "/": Home,
-    "/product/:id": Single,
-    "/order/:id": OrderScreen,
-    "/cart/:id": Cart,
-    "/cart": Cart,
-    "/signin": Signin,
-    "/register": Register,
-    "/profile": Profile,
-    "/shipping": Shipping,
-    "/payment": Payment,
-    "/placeorder": PlaceOrderScreen,
-
-
-}
+const routes = {
+  "/": Home,
+  "/product/:id": Single,
+  "/order/:id": OrderScreen,
+  "/cart/:id": Cart,
+  "/cart": Cart,
+  "/signin": Signin,
+  "/register": Register,
+  "/profile": Profile,
+  "/shipping": Shipping,
+  "/payment": Payment,
+  "/placeorder": PlaceOrderScreen,
+  "/dashboard": Dashboard,
+  "/productlist": ProductList,
+  "/orderlist": OrderList,
+  "/createproduct": CreateProduct,
+};
 
 
 

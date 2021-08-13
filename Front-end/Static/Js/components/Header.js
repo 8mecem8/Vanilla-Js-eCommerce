@@ -5,8 +5,8 @@ const Header =
     render: async() =>
     {
 
-        const {name} = await getUserInfo()
-        //console.log('userInfo is in the header screen',name)
+        const {name,isAdmin} = await getUserInfo()
+        //console.log('userInfo is in the header screen',isAdmin)
 
         return`
         
@@ -20,6 +20,13 @@ const Header =
                  }
                 
                 <a class="route-link" href="/#/Cart"><img src="https://www.bestbuy.com/~assets/bby/_com/shop/cart-icon/dist/client/images/1905cd7135529612f63c727e038008c3.svg" alt="cart icon" />Cart</a>
+                
+                ${isAdmin 
+                  ? `<a class="route-link" href='/#/dashboard'>Dashboard</a>`
+                  : ``
+                 }
+                
+
                 ${name 
                   ? `<a class="route-link" id="logout" href='/'><i class="fas fa-sign-out-alt"></i></i></a>`
                   : ``

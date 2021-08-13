@@ -7,6 +7,7 @@ const data = require('./Sup-files/data.js')
 
 const userRouter = require('./Routes/userRoute.js');
 const orderRouter  = require('./Routes/orderRoute.js');
+const productRouter = require("./Routes/productRoute.js");
 
 require('dotenv').config({path:__dirname+'/.env'})
 
@@ -28,6 +29,7 @@ app.use(express.json({ strict: false }))
 
 app.use('/api/users', userRouter)
 app.use('/api/order', orderRouter)
+app.use("/api/product", productRouter);
 
 //Database------------------------------------------------------------------------------
 

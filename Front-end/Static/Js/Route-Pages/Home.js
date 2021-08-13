@@ -1,24 +1,15 @@
 import Rating from "../components/Rating.js"
+import { getProducts, showMessage } from "../Sup-files/Util.js"
 
 
-const fetchedData = async () =>
-{
-const response = await fetch('http://localhost:5000/api/products')
-const data = await response.json()
-    //console.log(data) //return JSON.parse(data)
-    return await data
-}
-
-
-const prlist = await fetchedData()
-
-
-//console.log(prlist)
 
 const home =
 {
     render:  async () =>
     {   
+        const prlist = await getProducts()
+            
+
         return `
         <ul class="products">
             ${ await prlist.map(at=>

@@ -48,7 +48,7 @@ const Profile =
             const orders = await getMyOrders()
 
 
-            console.log("orders in profile.js is ====>",orders)
+            //console.log("orders in profile.js is ====>",orders)
             
 
             return`
