@@ -1,6 +1,5 @@
 import { parseRequestUrl, rerender } from '../Sup-files/Util.js'
 import axios from "axios"
-import Rating from "../components/Rating.js"
 import { getCartItems, setCartItems } from '../Sup-files/Lstorage.js';
 
 
@@ -89,7 +88,7 @@ render: async()=>
         const request = parseRequestUrl()
         if(request.id)
         {
-            const reProduct = await axios.get(`http://localhost:5000/api/products/${request.id}`).then(at => at).catch(err => err);
+            const reProduct = await axios.get(`http://localhost:5000/api/product/${request.id}`).then(at => at).catch(err => err);
 
             addtoCart({
             Product:reProduct.data._id,

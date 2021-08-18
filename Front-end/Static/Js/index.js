@@ -1,3 +1,4 @@
+import '../Css/main.css'
 import Home from '../Js/Route-Pages/Home.js'
 import Header from './components/Header.js'
 import Cart from './Route-Pages/Cart.js'
@@ -9,19 +10,21 @@ import Signin from './Route-Pages/Signin.js'
 import Single from './Route-Pages/SingleProduct.js'
 import { parseRequestUrl } from './Sup-files/Util.js'
 
-import '../Css/sePePl.css'
+
 import Payment from './Route-Pages/Payment.js'
 import PlaceOrderScreen from './Route-Pages/PlaceOrder.js'
 import OrderScreen from './Route-Pages/Order.js'
 import Dashboard from './Route-Pages/Dashboard.js'
 import ProductList from './Route-Pages/ProductList.js'
 import OrderList from './Route-Pages/OrderList.js'
-import CreateProduct from "./Route-Pages/CreateProduct.js";
+import CreateProduct from "./Route-Pages/CreateProduct.js"
+import ProductEdit from "./Route-Pages/ProductEdit.js";
 
 
 
 const routes = {
   "/": Home,
+  "/product/:id/edit":ProductEdit,
   "/product/:id": Single,
   "/order/:id": OrderScreen,
   "/cart/:id": Cart,

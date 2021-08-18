@@ -1,6 +1,9 @@
 import axios from "axios";
 import { getCartItems } from "./Lstorage";
 
+
+
+
 export const parseRequestUrl = () => {
   const url = document.location.hash.toLowerCase();
   const request = url.split("/");
@@ -260,14 +263,36 @@ export const getMyOrders = async () => {
   }
 };
 
+
+
+
 export const getProducts = async () => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/products`);
+    const response = await axios.get(`http://localhost:5000/api/product`);
     return response.data;
   } catch (err) {
     return { message: err.response ? err.response.data.error : err.message };
   }
 };
+
+
+
+
+
+
+
+export const getProduct = async (id) => {
+  try {
+    const response = await axios.get(`http://localhost:5000/api/product/${id}`);
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
 
 export const createProduct = async (product) => {
   try {
@@ -290,5 +315,198 @@ export const createProduct = async (product) => {
     return response.data;
   } catch (err) {
     return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+
+export const updateProduct = async (product) => {
+  try {
+    const { isAdmin, name, token } = await getUserInfo();
+
+    const config = {
+      headers: {
+        Authorization: `bearer ${token}`,
+        user: name,
+        isAdmin: isAdmin,
+      },
+    };
+
+    const response = await axios.put(
+      `http://localhost:5000/api/product/${product._id}`,
+      product,
+      config
+    );
+
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+export const uploadProductImage = async (formdata) => {
+  try {
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {
+      headers: {
+        Authorization: `bearer ${token}`,
+        user: name,
+        isAdmin: isAdmin,
+        "Content-Type": "multipart/form-data",
+      },
+    };
+
+    const response = await axios.post(
+      `http://localhost:5000/api/uploads`,
+      formdata,
+      config
+    );
+
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+export const deleteProduct = async (productId) => {
+  try {
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+
+    const response = await axios.delete(`http://localhost:5000/api/product/${productId}`,config);
+
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+
+
+
+
+export const getorders = async () => {
+  try {
+
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+
+
+    const response = await axios.get(`http://localhost:5000/api/order`,config);
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+
+
+export const deleteOrder= async (productId) => {
+  try {
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+
+    const response = await axios.delete(`http://localhost:5000/api/order/${productId}`,config);
+
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const deliverOrder = async (orderId) => {
+  try {
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+    
+    
+
+    const response = await axios.put(`http://localhost:5000/api/order/${orderId}/deliver`,config);
+
+    console.log(response)
+
+    return response.data;    
+  } 
+  
+  catch (err) {
+    return { error: err.response ? err.response.data.message : err.message };
+  }
+};
+
+
+
+
+
+export const deliverOrdero= async (productId) => {
+  try {
+    const { token, isAdmin, name } = await getUserInfo();
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+
+    const response = await axios.put(`http://localhost:5000/api/order/${productId}/deliver`,name,config);
+
+    return response.data;
+  } catch (err) {
+    return { message: err.response ? err.response.data.error : err.message };
+  }
+};
+
+
+
+
+export const getSummary = async () => {
+  try {
+
+
+    const { token, isAdmin, name } = await getUserInfo();
+
+
+
+    const config = {headers: {Authorization: `bearer ${token}`,user: name,isAdmin: isAdmin,}};
+
+    const response = await axios.get(`http://localhost:5000/api/order/summary`,config);
+    
+    return response.data
+
+  }
+   catch (err) {return { error: err.response ? err.response.data.message : err.message };
   }
 };

@@ -22,7 +22,7 @@ render: async()=>
         const request = parseRequestUrl()
         const reqNum = request.id
         //console.log(request)
-        const reProduct = await axios.get(`http://localhost:5000/api/products/${reqNum}`).then(at => at).catch(err => err)
+        const reProduct = await axios.get(`http://localhost:5000/api/product/${reqNum}`).then(at => at).catch(err => err)
         
         
         if(reProduct.response?.data){return`<div><h1>${reProduct.response.status} ${Object.values(reProduct.response.data)}</h1></div>`}

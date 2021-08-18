@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
+const path = require('path')
 
 const mongoose = require('mongoose');
 const data = require('./Sup-files/data.js')
@@ -8,6 +9,7 @@ const data = require('./Sup-files/data.js')
 const userRouter = require('./Routes/userRoute.js');
 const orderRouter  = require('./Routes/orderRoute.js');
 const productRouter = require("./Routes/productRoute.js");
+const uploadRouter = require("./Routes/uploadRoute.js");
 
 require('dotenv').config({path:__dirname+'/.env'})
 
@@ -25,8 +27,15 @@ require('dotenv').config({path:__dirname+'/.env'})
 
 app.use(cors())
 app.use(express.json({ strict: false }))
+app.use('/uploads', express.static(path.join(__dirname, '/../uploads')))
+app.use(express.static(path.join(__dirname, '/build')))
+//app.use(express.static(path.join(__dirname, '/../Front-end')))
 
 
+
+
+
+app.use("/api/uploads", uploadRouter);
 app.use('/api/users', userRouter)
 app.use('/api/order', orderRouter)
 app.use("/api/product", productRouter);
@@ -39,6 +48,18 @@ mongoose.connect(process.env.DB_C,{ useUnifiedTopology: true, useNewUrlParser: t
 
 
 // Routes--------------------------------------------------------------------------------
+
+
+
+
+/* app.get('*',(req,res,next)=>
+{
+    res.sendFile(path.join(__dirname, '/../Front-end/build/index.html'))
+}) */
+ 
+
+
+
 app.get("/api/products", (req, res)=>
 {
     //res.send(data.products)

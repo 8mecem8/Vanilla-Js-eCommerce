@@ -1,1 +1,14 @@
+dist
+/dist
 node_modules
+/node_modules
+uploads/*.jpg
+uploads/*.png
+
+
+
+
+.env
+.env.local
+.env.development.local
+

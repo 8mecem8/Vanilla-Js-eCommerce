@@ -1,5 +1,5 @@
 module.exports = isAdmin = (req, res, next) => {
-  console.log(req.headers);
+  
   if (req.headers.user && req.headers.isadmin) {
     ;
     next();
