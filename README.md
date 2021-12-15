@@ -5,7 +5,7 @@ In this project I used OOP programming model with JS 'Class' to write components
 
 My main target was to learn how E-commerce platforms work and make better future E-commerce projects
 
-<br>
+<br><br>
 
 Please visit the project address ==> https://buyozon-ecommerce-app.herokuapp.com/ 
 
