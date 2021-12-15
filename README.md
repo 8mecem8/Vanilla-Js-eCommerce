@@ -1,6 +1,8 @@
 # Vanilla-Js-eCommerce
 Simple amazon like Vanilla-Js eCommerce project
 
+In this project I used OOP programming model with JS 'Class' to write components
+
 
 # Languages and Tools
  
