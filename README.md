@@ -16,7 +16,8 @@ Log in as admin | admin@admin.com password: 12345
 
 # Languages and Tools
  
- Developed the Project using with<br>
+ Developed the Project using with
+ 
  <img src="https://github.com/github/explore/blob/main/topics/html/html.png" alt="html" width="40" height="40"/>  <img src="https://github.com/github/explore/blob/main/topics/css/css.png" alt="css" width="40" height="40"/>  <img src="https://github.com/github/explore/blob/main/topics/javascript/javascript.png" alt="javascript" width="40" height="40"/>  <img src="https://github.com/github/explore/blob/main/topics/nodejs/nodejs.png" alt="nodejs" width="40" height="40"/>  <img src="https://github.com/github/explore/blob/main/topics/bootstrap/bootstrap.png" alt="bootstrap" width="40" height="40"/> <img   src="https://github.com/github/explore/blob/main/topics/mongodb/mongodb.png" alt="mongodb" width="60" height="60"/>
   
  ![image](https://user-images.githubusercontent.com/42888722/146282168-fb71a348-f984-40e6-88d8-880bec7f6aac.png)
