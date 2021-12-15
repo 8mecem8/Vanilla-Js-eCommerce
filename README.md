@@ -1,7 +1,9 @@
 # Vanilla-Js-eCommerce
 Simple amazon like Vanilla-Js eCommerce project
 
-In this project I used OOP programming model with JS 'Class' to write components
+In this project I used OOP programming model with JS 'Class' to write components, I used dynamic routing with JS without page refreh.For payment Methods I used paypal api.
+
+My main target was to learn how E-commerce platforms work and make better future E-commerce pprojects
 
 
 # Languages and Tools
