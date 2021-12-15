@@ -7,7 +7,7 @@ My main target was to learn how E-commerce platforms work and make better future
 
 <br><br>
 
-Please visit the project address ==> https://buyozon-ecommerce-app.herokuapp.com/ 
+You can use the web application, with visiting the project address ==> https://buyozon-ecommerce-app.herokuapp.com/ 
 
 Log in | You can register or You can use test@test.com password: 12345
 
