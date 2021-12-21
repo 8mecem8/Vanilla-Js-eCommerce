@@ -7,11 +7,11 @@ My main target was to learn how E-commerce platforms work and make better future
 
 <br><br>
 
-You can use the web application, with visiting the project address ==> https://buyozon-ecommerce-app.herokuapp.com/ 
+You can use the web application, visiting the project address ==> https://buyozon-ecommerce-app.herokuapp.com/ 
 
-Log in | You can register or You can use ==> User Name: test@test.com Password: 12345
+Log in | You can register or You can loging with ==> User Name: test@test.com Password: 12345
 
-Log in as admin | admin@admin.com password: 12345
+Log in as admin to use Admin Panel | User Name: admin@admin.com Password: 12345
 
 
 # Languages and Tools
